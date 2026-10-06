@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addPersonController">
+   <children>
+      <Button fx:id="addPerson" layoutX="534.0" layoutY="361.0" mnemonicParsing="false" text="Add" />
+      <ImageView fx:id="pol" fitHeight="272.0" fitWidth="269.0" layoutX="36.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/pol.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="proPic" fitHeight="163.0" fitWidth="157.0" layoutX="74.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="lastName" layoutX="153.0" layoutY="242.0" prefHeight="25.0" prefWidth="94.0" promptText="Last Name" style="-fx-background-color: transparent;" />
+      <TextField fx:id="birth" layoutX="74.0" layoutY="267.0" promptText="Birthday: MM/DD/YYYY" style="-fx-background-color: transparent;" />
+      <TextField fx:id="firstName" layoutX="55.0" layoutY="242.0" prefHeight="25.0" prefWidth="94.0" promptText="First Name" style="-fx-background-color: transparent;" />
+      <Label alignment="CENTER" layoutX="403.0" layoutY="181.0" prefHeight="25.0" prefWidth="42.0" text="OF">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" prefHeight="57.0" prefWidth="221.0" text="Add New Person">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="addPic" layoutX="123.0" layoutY="145.0" mnemonicParsing="false" text="Add Pic" />
+      <Label alignment="CENTER" layoutX="349.0" layoutY="97.0" prefHeight="26.0" prefWidth="150.0" text="RELATIONSHIP:" />
+      <ComboBox fx:id="gender" layoutX="74.0" layoutY="310.0" prefWidth="150.0" promptText="Gender" />
+      <ComboBox fx:id="names" layoutX="349.0" layoutY="216.0" prefWidth="150.0" promptText="Name" />
+      <ComboBox fx:id="childParent" layoutX="349.0" layoutY="145.0" prefWidth="150.0" promptText="Child/Parent" />
+   </children>
+</AnchorPane>

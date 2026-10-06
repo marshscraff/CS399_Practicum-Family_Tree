@@ -1,0 +1,176 @@
+@startuml
+title Family Tree Application UML Diagram
+
+class FamilyTreeApp {
++start(Stage)
++main(String[])
+}
+
+class ViewSwitchController{
+-FamilyTree currentTree
+-Object currentController
++initialize()
++getTree()
++currentController()
++getCurrentController()
+}
+
+class Controller{
++initialize()
+}
+
+class TreeViewController {
+-Pane treePane
+-ScrollPane scrollPane
+-Map<Person, Cords> coordinates
+-Map<Family, Cords> famCoordinates
++initialize()
++drawTree()
+}
+
+class HomeParentsController{
++initialize()
+}
+
+class HomePersonController{
++initialize
+}
+
+class indiPersonPageController{
++setPerson(Person)
++update()
+}
+
+class PersonCard {
+-Person person
+-ImageView proPic
+-Label name
++setPerson(Person)
++onClick()
+}
+
+class TreeLayout {
+-Map<Person,Integer> genMap
+-Map<Integer,List<Person>> rows
+-Map<Person,Cords> coordinates
+-Map<Family,Cords> famCoordinates
++assignGen(Person,int)
++assignFam()
++placement()
++layout(Person)
++getFamilyCords()
+}
+
+class FamilyTree {
+-Person homePerson
+-String treeName
+-List<Person> allPeople
++FamilyTree()
++addPersonToTree(Person)
++getAllPeople()
++setTreeName(String)
++getTreeName()
++setHome(Person)
++getHome()
++save(String)
++load(File)
+}
+
+class Person {
+-int id
+-String name
+-String firstMiddle
+-String surName
+-String birth
+-String death
+-String gender
+-Set<Person> parents
+-Set<Person> spouse
+-Set<Person> children
+-Set<Family> childFamilies
+-Set<Family> spouseFamilies
+-Map<String,String> events
++Person()
++setID(int)
++addDeath(String)
++getDeath()
++addChildFam(Family)
++addSPouseFam(Family)
++getChildFam()
++getSpouseFam()
++getId()
++setName(String,String)
++getFirstName()
++getSurname()
++getName()
++setGender()
++getGender()
++setBirth(String)
++getBirth()
++addParent(Person)
++getParents()
++getParentsStr()
++addSpouse(Person)
++getSpouse()
++addChild(Person)
++getChildren()
++getChildrenStr()
++addEvent(String,String)
++getEvents()
+}
+
+class Family {
+-int famID
+-Person parent1
+-Person parent2
+-List<Person> children
+-List<Family> allFamilies
++Family(Person,Person)
++setParent1(Person)
++setParent2(Person)
++setID(int)
++addFamily(Family)
++getFamilies()   
++addChild(Person)
++getParent1()
++getParent2()
++getChildren()
++getChildrenString()
++getFamID()
+}
+
+class Cords {
+-double x
+-double y
++Cords(double,double)
+}
+
+' Relationships
+
+FamilyTreeApp -->ViewSwitchController
+ViewSwitchController --> Controller
+Controller --> HomePersonController
+Controller --> FamilyTree
+HomePersonController --> HomeParentsController
+HomeParentsController --> TreeViewController
+TreeViewController --> TreeLayout
+TreeViewController --> indiPersonPageController
+Cords--> TreeLayout
+Cords--> TreeViewController
+
+TreeLayout --> Person
+TreeLayout --> Family
+
+FamilyTree --> Person
+FamilyTree --> Family
+
+Person "1" -- "*" Family : childFam
+Person "1" -- "*" Family : spouseFam
+
+Family "1" -- "2" Person : parents
+Family "1" -- "*" Person : children
+
+PersonCard --> Person
+PersonCard --> TreeViewController
+
+@enduml

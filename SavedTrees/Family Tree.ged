@@ -1,0 +1,38 @@
+0 HEAD
+1 SOUR FamilyTreeApp
+1 FILE Family Tree
+1 GEDC
+2 VERS 5.5
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+0 @I1@ INDI
+1 NAME Marshall /Scrafford/
+2 GIVN Marshall
+2 SURN Scrafford
+1 SEX U
+1 BIRT
+2 DATE 04/25/2000
+1 FAMC @F1@
+
+0 @I2@ INDI
+1 NAME Amber /Nicks/
+2 GIVN Amber
+2 SURN Nicks
+1 SEX F
+1 BIRT
+2 DATE 11/08/1978
+1 FAMS @F1@
+0 @I3@ INDI
+1 NAME Erik /Scrafford/
+2 GIVN Erik
+2 SURN Scrafford
+1 SEX M
+1 BIRT
+2 DATE 11/01/1976
+1 FAMS @F1@
+
+0 @F1@ FAM
+1 HUSB @I3@
+1 WIFE @I2@
+1 CHIL @I1@
+0 TRLR

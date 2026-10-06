@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="indiPersonPageController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="proPic" fitHeight="136.0" fitWidth="130.0" layoutX="41.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="pol" fitHeight="234.0" fitWidth="201.0" layoutX="6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/pol.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="birth" layoutX="202.0" layoutY="33.0" prefHeight="21.0" prefWidth="151.0" text="Birth:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="death" layoutX="202.0" layoutY="60.0" prefHeight="21.0" prefWidth="152.0" text="Death: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="name" layoutX="31.0" layoutY="191.0" prefHeight="29.0" prefWidth="149.0" text="Name" />
+            <Separator layoutX="-1.0" layoutY="248.0" prefHeight="3.0" prefWidth="593.0" />
+            <ListView fx:id="events" layoutX="10.0" layoutY="248.0" prefHeight="200.0" prefWidth="192.0" />
+            <ListView fx:id="parentsSiblings" layoutX="210.0" layoutY="248.0" prefHeight="200.0" prefWidth="189.0" />
+            <ListView fx:id="spouseChildren" layoutX="408.0" layoutY="248.0" prefHeight="200.0" prefWidth="192.0" />
+            <Label layoutX="28.0" layoutY="225.0" text="Events">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="229.0" text="Parents/Siblings">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="415.0" layoutY="230.0" text="Spouse/Children">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="notes" layoutX="341.0" layoutY="44.0" prefHeight="177.0" prefWidth="221.0" />
+            <Label layoutX="338.0" layoutY="18.0" text="Notes">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="addPic" layoutX="75.0" layoutY="90.0" mnemonicParsing="false" text="Add Pic" />
+            <Button fx:id="addParentSiblings" layoutX="346.0" layoutY="228.0" mnemonicParsing="false" text="Add" />
+            <Button fx:id="addSpouseChild" layoutX="525.0" layoutY="227.0" mnemonicParsing="false" text="Add" />
+            <Button fx:id="addEvent" layoutX="131.0" layoutY="227.0" mnemonicParsing="false" text="Add" />
+            <MenuBar layoutX="-2.0" layoutY="1.0" prefHeight="25.0" prefWidth="595.0">
+              <menus>
+                <Menu fx:id="home" mnemonicParsing="false" text="Home" />
+                <Menu fx:id="save" mnemonicParsing="false" text="Save" />
+                <Menu fx:id="tree" mnemonicParsing="false" text="Tree" />
+                  <Menu fx:id="help" mnemonicParsing="false" text="Help" />
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
